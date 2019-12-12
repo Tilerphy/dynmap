@@ -25,5 +25,8 @@
 # Mac filesystem dust
 /.DS_Store
 /dependency-reduced-pom.xml
+<<<<<<< HEAD
 
 /.gradle
+=======
+>>>>>>> b6439100e4a782eb15adb41aa99463f0c308cdc5

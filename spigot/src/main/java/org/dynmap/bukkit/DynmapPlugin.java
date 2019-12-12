@@ -82,6 +82,7 @@ import org.dynmap.bukkit.helper.BukkitVersionHelper;
 import org.dynmap.bukkit.helper.BukkitWorld;
 import org.dynmap.bukkit.helper.SnapshotCache;
 import org.dynmap.bukkit.permissions.BukkitPermissions;
+import org.dynmap.bukkit.permissions.LuckPermsPermissions;
 import org.dynmap.bukkit.permissions.NijikokunPermissions;
 import org.dynmap.bukkit.permissions.OpPermissions;
 import org.dynmap.bukkit.permissions.PEXPermissions;
@@ -559,10 +560,14 @@ public class DynmapPlugin extends JavaPlugin implements DynmapAPI {
             HashMap<Integer, String> map = new HashMap<Integer, String>();
             for (int i = 0; i < bsn.length; i++) {
                 if (bsn[i] != null) {
+<<<<<<< HEAD:spigot/src/main/java/org/dynmap/bukkit/DynmapPlugin.java
                 	if (bsn[i].indexOf(':') < 0)
                 		map.put(i, "minecraft:" + bsn[i]);
                 	else
                 		map.put(i, bsn[i]);
+=======
+                    map.put(i, "minecraft:" + bsn[i]);
+>>>>>>> b6439100e4a782eb15adb41aa99463f0c308cdc5:src/main/java/org/dynmap/bukkit/DynmapPlugin.java
                 }
             }
             return map;
@@ -864,6 +869,10 @@ public class DynmapPlugin extends JavaPlugin implements DynmapAPI {
         core.setMinecraftVersion(mcver);
         core.setDataFolder(dataDirectory);
         core.setServer(new BukkitServer());
+<<<<<<< HEAD:spigot/src/main/java/org/dynmap/bukkit/DynmapPlugin.java
+=======
+        core.setBlockMaterialMap(helper.getBlockMaterialMap());
+>>>>>>> b6439100e4a782eb15adb41aa99463f0c308cdc5:src/main/java/org/dynmap/bukkit/DynmapPlugin.java
         core.setBiomeNames(helper.getBiomeNames());
         
         /* Load configuration */
